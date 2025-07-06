@@ -3,6 +3,11 @@ module "rg" {
   rg_name  = "bablu_rg"
   location = "centralindia"
 }
+module "rg" {
+  source   = "../module/rg_azurerm"
+  rg_name  = "praveen_rg"
+  location = "East US"
+}
 
 module "vnet" {
   depends_on    = [module.rg]
