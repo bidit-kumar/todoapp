@@ -8,6 +8,11 @@ module "rg" {
   rg_name  = "praveen_rg"
   location = "East US"
 }
+module "rg1" {
+  source   = "../module/rg_azurerm"
+  rg_name  = "praveen_rg1"
+  location = "East US"
+}
 
 module "vnet" {
   depends_on    = [module.rg]
